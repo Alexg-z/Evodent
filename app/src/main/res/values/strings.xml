@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Ovedent</string>
 
-    // LOGIN
+    <!-- Layout Login -->
     <string name="logt1">Welcome to Ovedent</string>
     <string name="etxUsr">Email</string>
     <string name="etxPass">Password</string>
@@ -9,12 +9,36 @@
     <string name="btnLogin">Login</string>
     <string name="btnRegister">Register if you are new</string>
     <string name="title_activity_principal">Principal</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- Layout Register -->
+    <string name="ret1">Ovedent</string>
+    <string name="ret2">Please, first check the token</string>
+    <string name="retxToken">Token</string>
+    <string name="rchbToken">Token validation</string>
+    <string name="ret3">Please, give an email and password</string>
+    <string name="retxEmail">Email</string>
+    <string name="retxPassword">Password</string>
+    <string name="rbtnRegister">Register</string>
+
+    <!-- Layout Home Patient -->
+
+
+    <!-- Layout Home Doctor -->
+
+
+    <!-- Layout Dates -->
+
+
+    <!-- Layout Register a Date -->
+
+
+    <!-- Layout Dates doctor -->
+
+
+    <!-- Layout Expedient -->
+
+
+    <!-- Layout Patients doctor -->
+
+
 </resources>
