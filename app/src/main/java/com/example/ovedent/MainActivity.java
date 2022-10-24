@@ -3,16 +3,21 @@ package com.example.ovedent;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.ovedent.db.DbHelper;
 
 public class MainActivity extends AppCompatActivity {
 
     EditText etxUsr, etxPass;
     CheckBox chbSession;
+    Button btnCrear;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,17 +27,22 @@ public class MainActivity extends AppCompatActivity {
         etxUsr = (EditText) findViewById(R.id.etxUsr);
         etxPass = (EditText) findViewById(R.id.etxPass);
         chbSession = (CheckBox) findViewById(R.id.chbSession);
+        btnCrear = findViewById(R.id.btnLogin);
+        btnCrear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DbHelper dbHelper = new DbHelper(MainActivity.this);
+                SQLiteDatabase db = dbHelper.getWritableDatabase();
+                if (db !=null){
+                Toast.makeText(MainActivity.this, "Base de datos creada",
+Toast.LENGTH_LONG).show();
     }
-
-    // Function Login
-    public void login (View view) {
-
-
-    }
-
-    // Function Register
-    public void register (View view) {
-
-    }
-
+else
+{    // Function Login
+    Toast.makeText(MainActivity.this, "Base de datos error",
+            Toast.LENGTH_LONG).show();
+}
+}
+});
+}
 }
